@@ -10,3 +10,15 @@ poetry shell
 poetry add fastapi
 poetry add uvicorn
 ```
+
+## Commands - Step 2
+```bash
+poetry add pydantic
+
+curl localhost:3013/jokes
+curl -X POST -H "Content-Type: application/json" -d '{"joke_id": "11595daf-970e-494b-ba11-28bf23a886da", "joke_content": "A joke with Chuck Norris"}' localhost:3013/jokes
+curl -X POST -H "Content-Type: application/json" -d '{"joke_id": "11595daf-970e-494b-ba11-28bf23a886da", "joke_content": "A joke with Chuck Norris", "joke_author": "Chuck Norris"}' localhost:3013/jokes
+```
+# Pydantic
+* Rammeverk for data validering og settings management
+* Håndhever type-hint runtime
